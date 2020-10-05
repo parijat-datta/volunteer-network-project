@@ -5,6 +5,13 @@ import { UserContext } from '../../App';
 
 const Home = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+    const handleSignOut=()=>{
+      const newUser={
+        name:"",
+        email:""
+      }
+      setLoggedInUser(newUser);
+    }
     
     return (
         <div>
@@ -20,6 +27,8 @@ const Home = () => {
       <Link style={{margin:"3px",fontSize:"14px",color:"white"}} to="/login">Login</Link> 
       <Link style={{margin:"3px",fontSize:"14px",color:"white"}} to="/taskList">TaskList</Link> 
       <Link style={{margin:"3px",fontSize:"18px",color:"orange"}}> Welcome {loggedInUser.email}</Link> 
+      <button className="btn btn-danger" onClick={()=>handleSignOut()}>Sign out</button>
+   
     
     </Nav>
     <Form inline>
