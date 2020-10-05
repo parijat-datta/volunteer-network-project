@@ -20,6 +20,7 @@ import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import TaskList from './component/TaskList/TaskList';
 import AddBulkData from './component/AddBulkData/AddBulkData';
 import Admin from './component/Admin/Admin';
+import Footer from './component/Footer/Footer';
 export const UserContext=createContext();
 
 function App() {
@@ -67,7 +68,7 @@ function App() {
           </Route>
 
         </Switch>
-      
+      <Footer></Footer>
     </Router>
     </UserContext.Provider>
     </div>

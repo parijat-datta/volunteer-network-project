@@ -18,7 +18,7 @@ const TaskList = (props) => {
 
       
       
-   },[])
+   },[tasks])
 
   
    function deleteTask(id){

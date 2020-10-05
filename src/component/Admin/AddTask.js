@@ -106,21 +106,14 @@ const AddTask = () => {
        
        
   </form>}
-            {/* {state && <ul class="list-group">  {  
- 
- tasks.map(tk=>  <li class="list-group-item">{tk.title} <img style={{width:"auto",height:"100px",marginRight:"0"}} src={tk.picture} alt=""></img></li>
-
-
-
- )
-}</ul>} */}
+           
 
 
 {state && <ul class="list-group"> <br></br>
-<h5>All the Tasks</h5><hr></hr><button className="btn btn-warning" onClick={() =>handleNew()}>Add Another Task</button> {  
+<h5>All the Tasks</h5><hr></hr><button style={{fontSize:"24px",fontWeight:"bold"}} className="btn btn-warning" onClick={() =>handleNew()}>Add Another Task</button> {  
  
- tasks.map(tk=>  <li class="list-group-item">{tk.title}<br></br> <img style={{width:"auto",height:"100px",marginRight:"0"}} src={tk.picture} alt=""></img>
- <button className="btn btn-danger" onClick={()=>handleDelete(tk._id)}>Delete Task</button></li>
+ tasks.map(tk=>  <li class="list-group-item">{tk.title}<br></br> <img style={{width:"30%",height:"230px",marginRight:"0"}} src={tk.picture} alt=""></img>
+ <br></br><br></br><button className="btn btn-danger" onClick={()=>handleDelete(tk._id)}>Delete Task</button></li>
 
 
 
